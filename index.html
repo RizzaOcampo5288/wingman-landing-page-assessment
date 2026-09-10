@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </h1>
 
                             <p class="mb-4"> Original, release-ready beats built for rappers, singers, and creators who want a professional sound without waiting weeks for production.</p>
-                            <a href="#audit" class="btn btn-primary-custom">Browse Beats <i class="bi bi-arrow-right ms-2"></i></a>
+                            <a href="#audit" id="mainCTA" class="btn btn-primary-custom">Browse Beats <i class="bi bi-arrow-right ms-2"></i></a>
 
                             <div class="mt-4 small text-secondary">
                                 <i class="bi bi-check-circle-fill text-success me-1"></i> Instant Download
@@ -403,7 +403,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-       <script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
     const leadForm = document.getElementById("leadForm");
     const submitButton = document.getElementById("submitButton");
 
@@ -412,7 +414,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const loadingMessage = document.getElementById("formLoading");
 
     let isSubmitting = false;
+    let formStarted = false;
 
+    // FORM STARTED
+    leadForm.addEventListener("input", function () {
+        if (!formStarted) {
+            window.dataLayer.push({
+                event: "form_started",
+                form_name: "lead_form"
+            });
+
+            formStarted = true;
+        }
+    });
+
+    // FORM SUBMIT
     leadForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
@@ -453,22 +469,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const result = await response.json();
 
             if (!response.ok || !result.success) {
-                throw new Error(result.message || "Submission failed");
+                throw new Error(
+                    result.message || "Submission failed"
+                );
             }
 
             console.log("Lead submitted successfully:", result);
+
+            // SUCCESSFUL API RESPONSE FIRST
+            window.dataLayer.push({
+                event: "form_submitted",
+                form_name: "lead_form"
+            });
 
             loadingMessage.style.display = "none";
             successMessage.style.display = "block";
 
             leadForm.reset();
+            formStarted = false;
 
         } catch (error) {
             console.error("Lead submission failed:", error);
 
+            window.dataLayer.push({
+                event: "form_submission_failure",
+                form_name: "lead_form"
+            });
+
             loadingMessage.style.display = "none";
             errorMessage.textContent =
                 error.message || "Something went wrong. Please try again.";
+
             errorMessage.style.display = "block";
 
         } finally {
@@ -476,6 +507,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             submitButton.disabled = false;
         }
     });
+
+    // HERO CTA CLICK
+    const mainCTA = document.getElementById("mainCTA");
+
+    if (mainCTA) {
+        mainCTA.addEventListener("click", function () {
+            window.dataLayer.push({
+                event: "cta_click",
+                cta_name: "hero_cta"
+            });
+        });
+    }
 </script>
     </body>
 </html>
