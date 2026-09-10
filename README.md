@@ -268,3 +268,7 @@ With additional time I would look at:
 - Server-side conversion tracking
 - More detailed error logging
 - Automated performance testing
+
+
+API test successful see screenshot/api-success.png
+
