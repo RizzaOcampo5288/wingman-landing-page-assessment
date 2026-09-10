@@ -16,14 +16,14 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="BeatForge | Premium Beats for Independent Artists">
         <meta property="og:description" content="Professional, release-ready beats with straightforward licensing and instant access.">
-        <meta property="og:image" content="heroimage.png">
-        <meta property="og:url" content="https://your-site.netlify.app/">
+        <meta property="og:image" content="https://dreamy-brigadeiros-16ba9f.netlify.app/heroimage.png">
+        <meta property="og:url" content="https://dreamy-brigadeiros-16ba9f.netlify.app/">
 
         <!-- Twitter / X -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="BeatForge | Premium Beats for Independent Artists">
         <meta name="twitter:description" content="Professional beats for independent artists, ready to license and record.">
-        <meta name="twitter:image" content="heroimage.png">
+        <meta name="twitter:image" content="https://dreamy-brigadeiros-16ba9f.netlify.app/heroimage.png">
 
     </head>
 
@@ -331,7 +331,6 @@
                                 <!-- LOADING STATE -->
                                 <div id="formLoading" class="alert alert-info" role="status">
                                     <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
-
                                     Submitting your request...
                                 </div>
 
@@ -344,38 +343,17 @@
 
                                         <div class="col-md-6">
                                             <label for="email" class="form-label fw-semibold"> Email </label>
-                                            <input
-                                                type="email"
-                                                id="email"
-                                                name="email"
-                                                class="form-control"
-                                                placeholder="you@example.com"
-                                                required
-                                            />
+                                            <inpu type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required  />
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="genre" class="form-label fw-semibold"> Genre </label>
-
-                                            <input
-                                                type="text"
-                                                id="company"
-                                                name="company"
-                                                class="form-control"
-                                                placeholder="Hip-Hop, R&B, Pop, etc."
-                                            />
+                                            <label for="genre" class="form-label fw-semibold">Genre</label>
+                                            <input type="text" id="genre" name="genre" class="form-control" placeholder="Hip-Hop, R&B, Pop, etc." required/>
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="referenceartist" class="form-label fw-semibold"> Reference Artist / Sound </label>
-
-                                            <input
-                                                type="text"
-                                                id="company"
-                                                name="company"
-                                                class="form-control"
-                                                placeholder="Drake, SZA, Travis Scott, etc."
-                                            />
+                                            <label for="referenceartist" class="form-label fw-semibold">Reference Artist / Sound</label>
+                                            <input type="text" id="referenceartist" name="referenceartist" class="form-control" placeholder="Drake, SZA, Travis Scott, etc." required/>
                                         </div>
 
                                         <div class="col-12">
@@ -438,8 +416,8 @@
                     name: document.getElementById("name").value,
                     email: document.getElementById("email").value,
                     genre: document.getElementById("genre").value,
-                    referene artist: document.getElementById("referenceartist").value,
-                    message: document.getElementById("message").value,
+                    referenceArtist: document.getElementById("referenceartist").value,
+                    message: document.getElementById("message").value
                 };
 
                 try {
