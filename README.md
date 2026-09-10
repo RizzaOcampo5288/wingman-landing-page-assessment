@@ -1,11 +1,6 @@
 # wingman-landing-page-assessment
 Production-style marketing landing page with lead generation, API integration, CRM simulation, and analytics tracking.
 
-
-# Wingman Landing Page Assessment
-
-This project is a responsive marketing landing page created for the Web Developer Technical Assessment.
-
 The goal of the project is to demonstrate a basic production-style landing page including lead generation, API handling, marketing tracking, responsive design and SEO/performance considerations.
 
 ## Live Website
