@@ -269,8 +269,8 @@ With additional time I would look at:
 - More detailed error logging
 - Automated performance testing
 
-
-API test successful see screenshot/api-success.png
-Lighthouse test successful see GSC-Lighthouse.png
-GTM form test using tag assistant: GTM-event Triggers via Gtag.png
-GA4 form test using tag assistant: GA4 firing via gtag.png
+Screenshot
+- API test successful see screenshot/api-success.png
+- Lighthouse test successful see GSC-Lighthouse.png
+- GTM form test using tag assistant: GTM-event Triggers via Gtag.png
+- GA4 form test using tag assistant: GA4 firing via gtag.png
