@@ -1,7 +1,120 @@
-[build]
-  functions = "netlify/functions"
+export default async (request) => {
+    // Only allow POST requests
+    if (request.method !== "POST") {
+        return new Response(
+            JSON.stringify({
+                success: false,
+                message: "Method not allowed"
+            }),
+            {
+                status: 405,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+    }
 
-[[redirects]]
-  from = "/api/lead"
-  to = "/.netlify/functions/submit-lead"
-  status = 200
+    try {
+        // Get data sent from the form
+        const data = await request.json();
+
+        const {
+            name,
+            email,
+            genre,
+            artist,
+            message
+        } = data;
+
+        // Server-side validation
+        if (!name || !email || !genre || !artist || !message) {
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    message: "Please complete all required fields."
+                }),
+                {
+                    status: 400,
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }
+            );
+        }
+
+        // Basic email validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    message: "Please enter a valid email address."
+                }),
+                {
+                    status: 400,
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                }
+            );
+        }
+
+        /*
+         * SIMULATED CRM INTEGRATION
+         *
+         * In production, this is where the lead would
+         * be sent to HubSpot or another CRM.
+         *
+         * The HubSpot API token would be stored as a
+         * Netlify environment variable, not in this file.
+         */
+
+        const crmResult = {
+            success: true,
+            contactId: `demo-${Date.now()}`
+        };
+
+        console.log("Lead received:", {
+            name,
+            email,
+            genre,
+            artist,
+            message
+        });
+
+        console.log("CRM simulation:", crmResult);
+
+        // Successful API response
+        return new Response(
+            JSON.stringify({
+                success: true,
+                message: "Lead submitted successfully.",
+                contactId: crmResult.contactId
+            }),
+            {
+                status: 200,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+
+    } catch (error) {
+        console.error("Lead API error:", error);
+
+        return new Response(
+            JSON.stringify({
+                success: false,
+                message: "Internal server error."
+            }),
+            {
+                status: 500,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        );
+    }
+};
