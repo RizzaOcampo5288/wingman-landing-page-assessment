@@ -271,4 +271,6 @@ With additional time I would look at:
 
 
 API test successful see screenshot/api-success.png
-
+Lighthouse test successful see GSC-Lighthouse.png
+GTM form test using tag assistant: GTM-event Triggers via Gtag.png
+GA4 form test using tag assistant: GA5=4 firing via gtag.png
