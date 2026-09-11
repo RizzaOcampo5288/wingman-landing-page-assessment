@@ -62,10 +62,7 @@ export default async (request) => {
         }
 
         /*
-         * SIMULATED CRM INTEGRATION
-         *
-         * In production, this is where the lead would
-         * be sent to HubSpot or another CRM.
+         * SIMULATED CRM 
          *
          * The HubSpot API token would be stored as a
          * Netlify environment variable, not in this file.
