@@ -22,13 +22,13 @@ export default async (request) => {
         const {
             name,
             email,
-            genre,
-            artist,
+            company,
+            phone,
             message
         } = data;
 
         // Server-side validation
-        if (!name || !email || !genre || !artist || !message) {
+        if (!name || !email || !company || !phone || !message) {
             return new Response(
                 JSON.stringify({
                     success: false,
@@ -76,11 +76,11 @@ export default async (request) => {
             contactId: `demo-${Date.now()}`
         };
 
-        console.log("Lead received:", {
+       console.log("Lead received:", {
             name,
             email,
-            genre,
-            artist,
+            company,
+            phone,
             message
         });
 
