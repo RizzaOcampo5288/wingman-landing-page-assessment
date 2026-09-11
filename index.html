@@ -133,7 +133,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="row g-4">
 
-    <!-- TRAP & HIP-HOP -->
                     <div class="col-md-4">
                         <div class="service-card">
 
@@ -146,9 +145,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         </div>
                     </div>
-
-
-    <!-- R&B & MELODIC -->
                     <div class="col-md-4">
                         <div class="service-card">
 
@@ -161,9 +157,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         </div>
                     </div>
-
-
-    <!-- CUSTOM BEATS -->
                     <div class="col-md-4">
                         <div class="service-card">
 
@@ -180,8 +173,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  </div>
                 </div>
             </section>
-
-            <!-- HOW IT WORKS -->
             <section id="how-it-works" class="section section-light">
                 <div class="container">
                     <div class="text-center mb-5">
@@ -217,8 +208,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </section>
-
-            <!-- BENEFITS -->
             <section class="section">
                 <div class="container">
                     <div class="row align-items-center g-5">
@@ -280,7 +269,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </section>
 
-            <!-- TESTIMONIALS -->
             <section id="testimonials" class="section section-light">
                 <div class="container">
                     <div class="text-center mb-5">
@@ -331,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </section>
 
-            <!-- LEAD FORM -->
+            <!-- FORM -->
             <section id="audit" class="section audit-section">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -345,64 +333,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
 
                             <div class="audit-box">
-                                <!-- SUCCESS STATE -->
                                 <div id="formSuccess" class="alert alert-success" role="alert">
                                     <strong>Success!</strong>
                                     Your request has been submitted.
                                 </div>
-
-                                <!-- ERROR STATE -->
                                 <div id="formError" class="alert alert-danger" role="alert">
                                     Something went wrong. Please try again.
                                 </div>
-
-                                <!-- LOADING STATE -->
                                 <div id="formLoading" class="alert alert-info" role="status">
                                     <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
                                     Submitting your request...
                                 </div>
 
                                 <form id="leadForm">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="name" class="form-label fw-semibold"> Artist Name </label>
-                                            <input type="text" id="name" name="name" class="form-control" placeholder="Your artist name" required/>
-                                        </div>
+								    <div class="row g-3">
+								
+								        <div class="col-md-6">
+										    <label for="name" class="form-label fw-semibold"> Name </label>
+										    <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required />
+										</div>
+										
+										<div class="col-md-6">
+										    <label for="email" class="form-label fw-semibold"> Email </label>
+										    <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required />
+										</div>
+										
+										<div class="col-md-6">
+										    <label for="company" class="form-label fw-semibold"> Company / Artist Name </label>
+										    <input type="text" id="company" name="company" class="form-control" placeholder="Your company or artist name" required/>
+										</div>
+										
+										<div class="col-md-6">
+										    <label for="phone" class="form-label fw-semibold"> Phone </label>
+										    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 555 123 4567" required />
+										</div>
+										
+										<div class="col-12">
+										    <label for="message" class="form-label fw-semibold"> Tell Us What You're Looking For </label>
+										    <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, preferred sound, or what kind of production you need..." required></textarea>
+										</div>
+										
+										<div class="col-12 mt-4">
+										    <button type="submit" id="submitButton" class="btn btn-primary-custom w-100">
+										        Find My Sound <i class="bi bi-arrow-right ms-2"></i>
+										    </button>
+										</div>
 
-                                        <div class="col-md-6">
-                                            <label for="email" class="form-label fw-semibold"> Email </label>
-                                            <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="genre" class="form-label fw-semibold">Genre</label>
-                                            <input type="text" id="genre" name="genre" class="form-control" placeholder="Hip-Hop, R&B, Pop, etc." required/>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <label for="artist" class="form-label fw-semibold">Reference Artist / Sound</label>
-                                            <input type="text" id="artist" name="artist" class="form-control" placeholder="Drake, SZA, Travis Scott, etc." required/>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="message" class="form-label fw-semibold">Tell Us What You're Looking For</label>
-
-                                            <textarea id="message" name="message" class="form-control" placeholder="Describe the mood, tempo, style, or sound you have in mind..."></textarea>
-                                        </div>
-
-                                        <div class="col-12 mt-4">
-                                            <button type="submit" id="submitButton" class="btn btn-primary-custom w-100">Find My Sound <i class="bi bi-arrow-right ms-2"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
+								
+								    </div>
+								</form>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-
-        <!-- FOOTER -->
         <footer>
             <div class="container">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -421,122 +406,123 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    const leadForm = document.getElementById("leadForm");
-    const submitButton = document.getElementById("submitButton");
-
-    const successMessage = document.getElementById("formSuccess");
-    const errorMessage = document.getElementById("formError");
-    const loadingMessage = document.getElementById("formLoading");
-
-    let isSubmitting = false;
-    let formStarted = false;
-
-    // FORM STARTED
-    leadForm.addEventListener("input", function () {
-        if (!formStarted) {
-            window.dataLayer.push({
-                event: "form_started",
-                form_name: "lead_form"
-            });
-
-            formStarted = true;
-        }
-    });
-
-    // FORM SUBMIT
-    leadForm.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        if (isSubmitting) {
-            return;
-        }
-
-        if (!leadForm.checkValidity()) {
-            leadForm.reportValidity();
-            return;
-        }
-
-        isSubmitting = true;
-
-        successMessage.style.display = "none";
-        errorMessage.style.display = "none";
-        loadingMessage.style.display = "block";
-
-        submitButton.disabled = true;
-
-        const formData = {
-            name: document.getElementById("name").value.trim(),
-            email: document.getElementById("email").value.trim(),
-            genre: document.getElementById("genre").value.trim(),
-            artist: document.getElementById("artist").value.trim(),
-            message: document.getElementById("message").value.trim()
-        };
-
-        try {
-            const response = await fetch("/api/lead", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            });
-
-            const result = await response.json();
-
-            if (!response.ok || !result.success) {
-                throw new Error(
-                    result.message || "Submission failed"
-                );
-            }
-
-            console.log("Lead submitted successfully:", result);
-
-            // SUCCESSFUL API RESPONSE FIRST
-            window.dataLayer.push({
-                event: "form_submitted",
-                form_name: "lead_form"
-            });
-
-            loadingMessage.style.display = "none";
-            successMessage.style.display = "block";
-
-            leadForm.reset();
-            formStarted = false;
-
-        } catch (error) {
-            console.error("Lead submission failed:", error);
-
-            window.dataLayer.push({
-                event: "form_submission_failure",
-                form_name: "lead_form"
-            });
-
-            loadingMessage.style.display = "none";
-            errorMessage.textContent =
-                error.message || "Something went wrong. Please try again.";
-
-            errorMessage.style.display = "block";
-
-        } finally {
-            isSubmitting = false;
-            submitButton.disabled = false;
-        }
-    });
-
-    // HERO CTA CLICK
-    const mainCTA = document.getElementById("mainCTA");
-
-    if (mainCTA) {
-        mainCTA.addEventListener("click", function () {
-            window.dataLayer.push({
-                event: "cta_click",
-                cta_name: "hero_cta"
-            });
-        });
-    }
-</script>
+		<script>
+		    window.dataLayer = window.dataLayer || [];
+		
+		    const leadForm = document.getElementById("leadForm");
+		    const submitButton = document.getElementById("submitButton");
+		
+		    const successMessage = document.getElementById("formSuccess");
+		    const errorMessage = document.getElementById("formError");
+		    const loadingMessage = document.getElementById("formLoading");
+		
+		    let isSubmitting = false;
+		    let formStarted = false;
+		
+		    // Track when the user first starts interacting with the form
+		    leadForm.addEventListener("input", function () {
+		        if (!formStarted) {
+		            window.dataLayer.push({
+		                event: "form_started",
+		                form_name: "lead_form"
+		            });
+		
+		            formStarted = true;
+		        }
+		    });
+		
+		    // Handle form submission
+		    leadForm.addEventListener("submit", async function (event) {
+		        event.preventDefault();
+		
+		        if (isSubmitting) {
+		            return;
+		        }
+		
+		        if (!leadForm.checkValidity()) {
+		            leadForm.reportValidity();
+		            return;
+		        }
+		
+		        isSubmitting = true;
+		        submitButton.disabled = true;
+		
+		        successMessage.style.display = "none";
+		        errorMessage.style.display = "none";
+		        loadingMessage.style.display = "block";
+		
+		        const formData = {
+		            name: document.getElementById("name").value.trim(),
+		            email: document.getElementById("email").value.trim(),
+		            company: document.getElementById("company").value.trim(),
+		            phone: document.getElementById("phone").value.trim(),
+		            message: document.getElementById("message").value.trim()
+		        };
+		
+		        try {
+		            const response = await fetch("/api/lead", {
+		                method: "POST",
+		                headers: {
+		                    "Content-Type": "application/json"
+		                },
+		                body: JSON.stringify(formData)
+		            });
+		
+		            const result = await response.json();
+		
+		            if (!response.ok || !result.success) {
+		                throw new Error(
+		                    result.message || "Submission failed"
+		                );
+		            }
+		
+		            console.log("Lead submitted successfully:", result);
+		
+		            // Only fire this AFTER successful API response
+		            window.dataLayer.push({
+		                event: "form_submitted",
+		                form_name: "lead_form"
+		            });
+		
+		            loadingMessage.style.display = "none";
+		            successMessage.style.display = "block";
+		
+		            leadForm.reset();
+		            formStarted = false;
+		
+		        } catch (error) {
+		            console.error("Lead submission failed:", error);
+		
+		            window.dataLayer.push({
+		                event: "form_submission_failure",
+		                form_name: "lead_form"
+		            });
+		
+		            loadingMessage.style.display = "none";
+		
+		            errorMessage.textContent =
+		                error.message ||
+		                "Something went wrong. Please try again.";
+		
+		            errorMessage.style.display = "block";
+		
+		        } finally {
+		            isSubmitting = false;
+		            submitButton.disabled = false;
+		        }
+		    });
+		
+		    // Track hero CTA
+		    const mainCTA = document.getElementById("mainCTA");
+		
+		    if (mainCTA) {
+		        mainCTA.addEventListener("click", function () {
+		            window.dataLayer.push({
+		                event: "cta_click",
+		                cta_name: "hero_cta"
+		            });
+		        });
+		    }
+		</script>
     </body>
 </html>
